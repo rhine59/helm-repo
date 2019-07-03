@@ -12,8 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# license must be set to "accept" to accept the terms of the IBM license
-
+# MCM values
 replicaCount: 1
   
 appInClusterNamespace: default
@@ -25,6 +24,8 @@ targetCluster:
   resourceSelector:
     type: cpu
   compliances: ""
+
+# license must be set to "accept" to accept the terms of the IBM license
 
 license: "accept"
 
@@ -67,8 +68,8 @@ dataPVC:
   size: 2Gi
 
 service:
-  #type: ClusterIP
-  type: NodePort
+  type: ClusterIP
+  #type: NodePort
 
 resources:
   limits:
