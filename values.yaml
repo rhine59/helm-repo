@@ -13,6 +13,19 @@
 # limitations under the License.
 
 # license must be set to "accept" to accept the terms of the IBM license
+
+replicaCount: 1
+  
+appInClusterNamespace: default
+
+targetCluster:
+  labelSelector:
+    matchLabels:
+      environment: Dev
+  resourceSelector:
+    type: cpu
+  compliances: ""
+
 license: "accept"
 
 image:
@@ -52,6 +65,7 @@ dataPVC:
   size: 2Gi
 
 service:
+  #type: ClusterIP
   type: NodePort
 
 resources:
