@@ -67,6 +67,7 @@ dataPVC:
   ## size is the minimum size of the Persistent Volume
   size: 2Gi
 
+# July3
 service:
   type: ClusterIP
   #type: NodePort
